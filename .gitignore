@@ -1,0 +1,12 @@
+# cache
+__pycache__/
+
+# installation/build artifacts
+.yamk/
+site/
+uv.lock
+
+# local dev
+/cookbook.yaml.d/
+local/
+local.*

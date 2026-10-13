@@ -1,0 +1,105 @@
+site_name: Arbor
+site_url: https://arbor-lang.dev/
+site_description: The Arbor language design, reference, and tooling documentation.
+
+repo_name: arbor-language
+repo_url: https://github.com/arbor-language/arbor-language-docs
+edit_uri: ""
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+
+nav:
+  - Home: index.md
+  - Language tour: getting-started/tour.md
+  - Language reference:
+      - Functions and calls: language/functions.md
+      - Numbers and constants: language/numbers.md
+      - Modular arithmetic: language/modular-arithmetic.md
+      - Strings and secrets: language/strings.md
+      - Dates and times: language/time.md
+      - Containers: language/containers.md
+      - Ownership and freezing: language/ownership.md
+      - Types and generics: language/types.md
+      - Null and omission: language/special-values.md
+      - Purity and caching: language/purity.md
+      - Classes and inheritance: language/classes.md
+      - Decorators and settings: language/decorators.md
+      - Exceptions and contracts: language/contracts.md
+      - Handling failures and resources: language/exception-handling.md
+      - Tasks and async: language/concurrency.md
+      - Conditionals, indexing, and loops: language/control-flow.md
+  - Tooling:
+      - Projects and official tools: tooling/projects.md
+      - Compilation and toolchains: tooling/compilation.md
+      - Testing: tooling/testing.md
+      - Packages and dependencies: tooling/packages.md
+      - Versions and publication: tooling/versions.md
+  - Standard library: library/index.md
+  - About:
+      - Principles: about/principles.md
+      - Design status: about/status.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.details
+  - pymdownx.snippets
+
+theme:
+  name: material
+  language: en
+  logo: images/logo.jpg
+  favicon: images/favicon.ico
+
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - navigation.indexes
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.share
+
+plugins:
+  - search:
+      lang: en
